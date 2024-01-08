@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} {{job.title}} {% endblock %}
+
+{% block content %}
+
+{% load static %}
+
+  <section>
+    <div class="container">
+      <div class="view-post">
+        <h1 class="jobtitle">
+              {{ job.title }}
+        </h1>
+        <p class="location it">Location: <span>{{job.location.city}}</span></p>
+        <p class="status it">Type: <span>{{job.type}}</span></p>
+        <p class="budget it">Salary: <span>{{job.salary}}₹</span></p>
+        <div class="desc">
+          <p class="details">
+              {{job.desc}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
